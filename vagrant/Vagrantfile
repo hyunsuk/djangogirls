@@ -2,7 +2,11 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  provisioning_script_url = "https://gist.githubusercontent.com/hyunsuk/8529a9bcad5aabb993ce8e69005a1999/raw/daee2d01afef1338674cfde7968efefba915a81e/djangogirls.sh"
+  gist_url = "https://gist.githubusercontent.com/hyunsuk/"
+  uuid = "8529a9bcad5aabb993ce8e69005a1999"
+  revision = "5c2ca4bfb3f55dfc7ca1d255daadcab7b58c40d2"
+
+  provisioning_script_url = "#{gist_url}#{uuid}/raw/#{revision}/djangogirls.sh"
 
   config.vm.box = "ubuntu/xenial64"
   config.vm.network "private_network", ip: "192.168.33.10"
