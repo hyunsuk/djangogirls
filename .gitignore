@@ -96,3 +96,9 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# vagrant
+.vagrant
+
+# sqlite3
+db.sqlite3
